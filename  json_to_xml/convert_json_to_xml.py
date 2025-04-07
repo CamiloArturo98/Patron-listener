@@ -1,21 +1,19 @@
 import json
 import xml.etree.ElementTree as ET
 
-def dict_a_xml(tag, d):
-    elem = ET.Element(tag)
-    for clave, valor in d.items():
-        subelem = ET.SubElement(elem, clave)
-        subelem.text = str(valor)
-    return elem
+try:
+    with open("datos.json", "r") as archivo:
+        datos = json.load(archivo)
 
-def convertir_json_a_xml(json_file, xml_file):
-    with open(json_file, 'r', encoding='utf-8') as f:
-        datos = json.load(f)
-    
-    raiz = dict_a_xml('root', datos)
-    arbol = ET.ElementTree(raiz)
-    arbol.write(xml_file, encoding='utf-8', xml_declaration=True)
-    print(f"Archivo XML guardado como: {xml_file}")
+    root = ET.Element("personas")
 
-# Ejecutar conversión
-convertir_json_a_xml('datos.json', 'salida.xml')
+    for persona in datos["personas"]:
+        p = ET.SubElement(root, "persona")
+        for clave, valor in persona.items():
+            ET.SubElement(p, clave).text = str(valor)
+
+    tree = ET.ElementTree(root)
+    tree.write("resultado.xml", encoding="utf-8", xml_declaration=True)
+    print("Archivo resultado.xml generado exitosamente.")
+except FileNotFoundError:
+    print("Archivo JSON no encontrado.")

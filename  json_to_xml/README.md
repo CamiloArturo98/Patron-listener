@@ -1,18 +1,15 @@
-# Actividad: Conversión de JSON a XML
+# Conversión de JSON a XML
 
-## Integrantes
-- Camilo Arturo
+**Integrantes**  
+- Camilo Arturo  
 - Santiago Obando
 
-## Descripción del desarrollo
-- El script lee un archivo JSON y lo convierte a formato XML.
-- Se usó la librería `json` y `xml.etree.ElementTree`.
-- El archivo convertido se guarda como `salida.xml`.
+**Descripción del desarrollo**  
+Este script convierte un archivo `datos.json` con información de personas a un archivo XML estructurado. Si el archivo no existe, se lanza un mensaje de error.
 
-## Instrucciones para ejecutar
-
-1. Asegúrate de tener un archivo `datos.json` con contenido.
-2. Ejecuta el script con:
+**Cómo ejecutar**  
+Desde la terminal:
 
 ```bash
-python convert_json_to_xml.py
+cd json_to_xml
+python3 convert_json_to_xml.py

@@ -1,19 +1,15 @@
-# Actividad: Extensión de funcionalidad para archivos CSV
+# Extensión de funcionalidad para archivos CSV
 
-## Integrantes
-- Camilo Arturo
+**Integrantes**  
+- Camilo Arturo  
 - Santiago Obando
 
-## Descripción del desarrollo
-- El programa lee un archivo CSV y filtra las filas donde la columna 'edad' sea mayor a 30.
-- Utilizamos la librería `csv` de Python.
-- Se imprimen por consola las filas que cumplen con la condición.
-- Se añadieron validaciones para evitar errores comunes.
+**Descripción del desarrollo**  
+Este script lee un archivo CSV llamado `datos.csv`, imprime el encabezado y cada fila de datos. Se implementa manejo de errores para archivos no encontrados.
 
-## Instrucciones para ejecutar
-
-1. Asegúrate de tener un archivo `datos.csv` con contenido.
-2. Ejecuta el script con:
+**Cómo ejecutar**  
+Desde la terminal:
 
 ```bash
-python process_csv.py
+cd csv_extension
+python3 process_csv.py
