@@ -9,6 +9,8 @@ Este script convierte un archivo `datos.json` con información de personas a un 
 
 **Cómo ejecutar**  
 Desde la terminal:
+1. cd ' json_to_xml'
+2. python3 convert_json_to_xml.py
 
 ```bash
 cd json_to_xml
